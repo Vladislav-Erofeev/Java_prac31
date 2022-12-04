@@ -6,4 +6,8 @@ public class Hello {
             throw new ArithmeticException();
         return n + n/2;
     }
+
+    public int calculate(int n) {
+        return n + n/4;
+    }
 }

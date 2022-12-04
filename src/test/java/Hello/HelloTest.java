@@ -34,4 +34,12 @@ class HelloTest {
             Assert.assertNotEquals("", e.getMessage());
         }
     }
+
+    @Test
+    void Test4() {
+        Hello test1 = new Hello();
+        int actual = test1.calculate(4);
+        int expected = 5;
+        assertEquals(expected, actual);
+    }
 }
