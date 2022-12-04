@@ -1,0 +1,37 @@
+package Hello;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class HelloTest {
+
+    @Test
+    void Test1() {
+        Hello test1 = new Hello();
+        int actual = test1.calc(5);
+        int expected = 7;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Test2() {
+        Hello test1 = new Hello();
+        int actual = test1.calc(6);
+        int expected = 9;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void Test3() {
+        Hello test1 = new Hello();
+        try {
+            int actual = test1.calc(0);
+            Assert.fail("Expected ArithmeticExceptio");
+        }catch (ArithmeticException e) {
+            Assert.assertNotEquals("", e.getMessage());
+        }
+    }
+}
